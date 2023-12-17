@@ -1,0 +1,39 @@
+@use '../util' as u;
+
+.skills {
+    position: relative;
+    
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: u.rem(24);
+        padding-block: u.rem(40);
+        text-align: center;
+        border-bottom: 1px solid var(--c-gray);
+
+        @media (min-width: 62.5em) {
+            padding-block: u.rem(72);
+            grid-template-columns: repeat(3, 1fr);
+            border: none;
+        }
+    }
+    
+    &__name {
+        font-size: var(--f-l);
+        line-height: 1;
+    }
+
+        /*
+    &__rings {
+        position: absolute;
+        left: 90%;
+        bottom: 0;
+        translate: 0 50%;
+
+        @media (min-width: 62.5em) {
+            translate: -40% 60%;
+            left: 100%;
+        }
+    }
+    */
+}

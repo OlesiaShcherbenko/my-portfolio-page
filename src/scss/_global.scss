@@ -1,0 +1,55 @@
+@use 'util' as u;
+
+:root {
+    --c-black: hsl(0, 0%, 8%);
+    --c-gray: hsl(0, 0%, 85%);
+    --c-white: hsl(0, 0%, 100%);
+    --c-yellow: hsl(339, 94%, 45%);
+    --f-xl: #{clamp(
+        u.rem(40), 
+        1.443661971830986rem + 4.507042253521126vw, 
+        u.rem(88))};
+    --f-l: #{clamp(
+        u.rem(32), 
+        1.647887323943662rem + 1.5023474178403755vw, 
+        u.rem(48))};
+    --f-m: #{u.rem(24)};
+    --f-body: #{u.rem(18)};
+    --f-btn: #{u.rem(16)};
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: var(--c-black);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: var(--f-body);
+    line-height: 1.5;
+    color: var(--c-white);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: min(u.rem(1110), calc(100% - u.rem(32)));
+    margin-inline: auto;
+}
