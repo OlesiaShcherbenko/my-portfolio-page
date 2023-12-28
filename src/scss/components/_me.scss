@@ -38,7 +38,7 @@
             &__headline {
 
                 span {
-                    border-bottom: 4px solid var(--c-yellow);
+                    border-bottom: 4px solid var(--c-pink);
                 }
         
                 font-size: var(--f-xl);
@@ -68,7 +68,12 @@
                 color: var(--c-white);
                 letter-spacing: u.rem(2);
                 text-transform: uppercase;
-                border-bottom: 2px solid var(--c-yellow);
+                border-bottom: 2px solid var(--c-pink);
+            }
+
+            &__contact:hover {
+                color: var(--c-pink);
+                cursor: pointer;
             }
         }
 
